@@ -11,7 +11,7 @@ public class ArrayListTest {
         for(int i = 0; i < 10; i++) {
             list.add(i);
         }
-        list.add(6, 60);
+        list.add(3, 51);
         System.out.println("list = " + list);
         System.out.println("list.size() = " + list.size());
     }
