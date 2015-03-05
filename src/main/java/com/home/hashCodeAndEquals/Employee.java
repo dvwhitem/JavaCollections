@@ -41,6 +41,7 @@ public class Employee {
         this.department = department;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,8 +49,23 @@ public class Employee {
 
         Employee employee = (Employee) o;
 
-        if (id != null ? !id.equals(employee.id) : employee.id != null) return false;
+        if (!id.equals(employee.id)) return false;
 
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", department='" + department + '\'' +
+                '}';
     }
 }
