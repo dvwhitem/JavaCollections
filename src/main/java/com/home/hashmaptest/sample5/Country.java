@@ -31,19 +31,22 @@ public class Country {
     }
 
     @Override
-    public int hashCode() {
-        if(this.name.length()%2==0)
-            return 31;
-        else
-            return 95;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Country country = (Country) o;
+
+        if (population != country.population) return false;
+        if (name != null ? !name.equals(country.name) : country.name != null) return false;
+
+        return true;
     }
 
     @Override
-    public boolean equals(Object obj) {
-
-        Country other = (Country) obj;
-        if (name.equalsIgnoreCase((other.name)))
-            return true;
-        return false;
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (int) (population ^ (population >>> 32));
+        return result;
     }
 }
