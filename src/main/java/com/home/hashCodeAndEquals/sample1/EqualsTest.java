@@ -1,4 +1,4 @@
-package com.home.hashCodeAndEquals;
+package com.home.hashCodeAndEquals.sample1;
 
 import java.util.HashSet;
 import java.util.Set;

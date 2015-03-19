@@ -1,4 +1,4 @@
-package com.home.hashCodeAndEquals;
+package com.home.hashCodeAndEquals.sample1;
 
 /**
  * Created by go1095 on 3/2/15.
