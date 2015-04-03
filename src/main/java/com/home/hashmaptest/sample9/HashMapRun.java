@@ -32,12 +32,14 @@ public class HashMapRun {
         carsHashMap.put(kia, "South Korea");
 
         System.out.println(carsHashMap);
+        System.out.println(bmw.hashCode());
 
         Iterator<Cars> iterator = carsHashMap.keySet().iterator();
         while (iterator.hasNext()) {
             Cars cars = iterator.next();
             String country = carsHashMap.get(cars);
-            System.out.println("ID: " + cars.getId() + " BRAND: " + cars.getBrand() + "(" + country +  ")");
+            System.out.println("ID: " + cars.getId() + " BRAND: " + cars.getBrand() +
+                    "(" + country +  ")" + " HASH = " + cars.hashCode());
         }
     }
 }
